@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var cwon: UITextField!
     @IBOutlet weak var orimyr: UITextField!
     @IBOutlet weak var oriwon: UITextField!
+    @IBOutlet weak var btnReset: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,45 @@ class ViewController: UIViewController {
         cwon.text = "0.0"
         orimyr.text = "1.0"
         oriwon.text = "1.0"
+        
+        
+        let myrrate = UserDefaults.standard.string(forKey: "myrrate")
+        let gbprate = UserDefaults.standard.string(forKey: "wonrate")
+        let myrc = UserDefaults.standard.string(forKey: "myrc")
+        let gbpc = UserDefaults.standard.string(forKey: "wonc")
+        if myrrate != nil{
+            orimyr.text = myrrate
+        }
+        if gbprate != nil{
+            oriwon.text = gbprate
+        }
+        if myrc != nil{
+            cmyr.text = myrc
+        }
+        if gbpc != nil{
+            cwon.text = gbpc
+        }
+
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        btnReset.layer.borderWidth = 1
+        btnReset.layer.masksToBounds = false
+        btnReset.layer.borderColor = UIColor.black.cgColor
+        btnReset.layer.cornerRadius = btnReset.frame.height/2
+        btnReset.clipsToBounds = true
+    }
+    
+    @IBAction func reset(_ sender: Any) {
+        cmyr.text = "0.0"
+        cwon.text = "0.0"
+        orimyr.text = "1.0"
+        oriwon.text = "1.0"
+        UserDefaults.standard.set(oriwon.text, forKey: "wonrate")
+        UserDefaults.standard.set(orimyr.text, forKey: "myrrate")
+        UserDefaults.standard.set(cmyr.text, forKey: "myrc")
+        UserDefaults.standard.set(cwon.text, forKey: "wonc")
     }
     
     @IBAction func Con1(_ sender: Any) {
@@ -35,6 +75,11 @@ class ViewController: UIViewController {
         }else{
             cmyr.text = "0.0"
         }
+        
+        UserDefaults.standard.set(wonval, forKey: "wonrate")
+        UserDefaults.standard.set(myrval, forKey: "myrrate")
+        UserDefaults.standard.set(cmyr.text, forKey: "myrc")
+        UserDefaults.standard.set(cwon.text, forKey: "wonc")
     }
     
     
@@ -51,6 +96,11 @@ class ViewController: UIViewController {
         }else{
             cwon.text = "0.0"
         }
+        
+        UserDefaults.standard.set(wonval, forKey: "wonrate")
+        UserDefaults.standard.set(myrval, forKey: "myrrate")
+        UserDefaults.standard.set(cmyr.text, forKey: "myrc")
+        UserDefaults.standard.set(cwon.text, forKey: "wonc")
     }
     
     @IBAction func FindMYR(_ sender: Any) {
@@ -58,15 +108,25 @@ class ViewController: UIViewController {
             cmyr.text = "0.0"
             cwon.text = "0.0"
             orimyr.text = "1.0"
+            UserDefaults.standard.set(oriwon.text, forKey: "wonrate")
+            UserDefaults.standard.set(orimyr.text, forKey: "myrrate")
+            UserDefaults.standard.set(cmyr.text, forKey: "myrc")
+            UserDefaults.standard.set(cwon.text, forKey: "wonc")
             return
         }
         
         if wonval != 0 && myrrate != 0 {
             oriwon.text = String((wonval/myrrate*1).rounded(toPlaces: 6))
+            
         }else{
             oriwon.text = "1.0"
         }
         orimyr.text = "1.0"
+        UserDefaults.standard.set(oriwon.text, forKey: "wonrate")
+        UserDefaults.standard.set(orimyr.text, forKey: "myrrate")
+        UserDefaults.standard.set(cmyr.text, forKey: "myrc")
+        UserDefaults.standard.set(cwon.text, forKey: "wonc")
+
     }
     
     
@@ -75,6 +135,10 @@ class ViewController: UIViewController {
             cmyr.text = "0.0"
             cwon.text = "0.0"
             oriwon.text = "1.0"
+            UserDefaults.standard.set(oriwon.text, forKey: "wonrate")
+            UserDefaults.standard.set(orimyr.text, forKey: "myrrate")
+            UserDefaults.standard.set(cmyr.text, forKey: "myrc")
+            UserDefaults.standard.set(cwon.text, forKey: "wonc")
             return
         }
         
@@ -83,7 +147,13 @@ class ViewController: UIViewController {
         }else{
             orimyr.text = "1.0"
         }
+        
         oriwon.text = "1.0"
+        UserDefaults.standard.set(oriwon.text, forKey: "wonrate")
+        UserDefaults.standard.set(orimyr.text, forKey: "myrrate")
+        UserDefaults.standard.set(cmyr.text, forKey: "myrc")
+        UserDefaults.standard.set(cwon.text, forKey: "wonc")
+
     }
 }
 

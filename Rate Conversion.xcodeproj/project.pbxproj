@@ -16,6 +16,7 @@
 		5E9097EE1F45D13D00D39A59 /* Rate_ConversionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9097ED1F45D13D00D39A59 /* Rate_ConversionUITests.swift */; };
 		5E9097FC1F45E79600D39A59 /* myr.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9097FB1F45E79600D39A59 /* myr.png */; };
 		5E9097FE1F45E79F00D39A59 /* gbp.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9097FD1F45E79F00D39A59 /* gbp.png */; };
+		5E9098021F45F2BA00D39A59 /* reset.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E9098011F45F2BA00D39A59 /* reset.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5E9097EF1F45D13D00D39A59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9097FB1F45E79600D39A59 /* myr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myr.png; sourceTree = "<group>"; };
 		5E9097FD1F45E79F00D39A59 /* gbp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gbp.png; sourceTree = "<group>"; };
+		5E9098011F45F2BA00D39A59 /* reset.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reset.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5E9097CF1F45D13D00D39A59 /* ViewController.swift */,
 				5E9097D11F45D13D00D39A59 /* Main.storyboard */,
 				5E9097FD1F45E79F00D39A59 /* gbp.png */,
+				5E9098011F45F2BA00D39A59 /* reset.png */,
 				5E9097D41F45D13D00D39A59 /* Assets.xcassets */,
 				5E9097D61F45D13D00D39A59 /* LaunchScreen.storyboard */,
 				5E9097D91F45D13D00D39A59 /* Info.plist */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E9097D81F45D13D00D39A59 /* LaunchScreen.storyboard in Resources */,
+				5E9098021F45F2BA00D39A59 /* reset.png in Resources */,
 				5E9097FE1F45E79F00D39A59 /* gbp.png in Resources */,
 				5E9097D51F45D13D00D39A59 /* Assets.xcassets in Resources */,
 				5E9097FC1F45E79600D39A59 /* myr.png in Resources */,
